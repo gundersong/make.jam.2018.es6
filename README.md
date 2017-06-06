@@ -1,6 +1,5 @@
-#P5 + Babel + Webpack
+#P5 with ES6 template
 
 ##Usage
 npm i
-
-npm build (or webpack)
+npm run build

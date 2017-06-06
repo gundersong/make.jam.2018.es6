@@ -35181,16 +35181,12 @@
 	  value: true
 	});
 	function drawing(p5) {
-	  var canvasWidth = p5.windowWidth;
-	  var canvasHeight = p5.windowHeight;
-	  console.log(canvasWidth, canvasHeight);
 	  p5.setup = function () {
-	    p5.createCanvas(canvasWidth, canvasHeight);
+	    p5.createCanvas(100, 100);
 	  };
 
 	  p5.draw = function () {
-	    p5.background(255);
-	    p5.ellipse(p5.mouseX, p5.mouseY, 100, 100);
+	    p5.background(100);
 	  };
 	}
 

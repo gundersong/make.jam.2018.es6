@@ -1,11 +1,11 @@
 {
-  "name": "p5-webpack-babel-template",
+  "name": "p5-es6-template",
   "version": "1.0.0",
-  "author": "Andrew Burkus andrew@burkus.xyz",
-  "description": "pretty much the title/name",
+  "author": "gundersong",
+  "description": "Template for using p5 with ES6",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Andrew-Burkus/p5-webpack-babel-template"
+    "url": "https://github.com/gundersong/p5-es6-template"
   },
   "scripts": {
     "build": "webpack"

@@ -1,4 +1,4 @@
 import p5 from 'p5';
-import drawing from './src/drawing';
+import solarSystem from './src/solarSystem';
 
-new p5(drawing);
+new p5(solarSystem);

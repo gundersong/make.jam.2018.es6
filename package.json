@@ -8,7 +8,8 @@
     "url": "https://github.com/gundersong/p5-es6-template"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack && http-server"
   },
   "dependencies": {
     "p5": "^0.5.3"
@@ -22,6 +23,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
+    "file-loader": "^1.1.11",
     "webpack": "^1.13.2"
   }
 }

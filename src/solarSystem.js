@@ -13,7 +13,7 @@ const sun = {
 
 let sunTexture;
 let moonTexture;
-const sunRotation = 0;
+let sunRotation = 0;
 
 export default function solarSystem(p5) {
   p5.setup = () => {
@@ -44,7 +44,7 @@ export default function solarSystem(p5) {
     p5.sphere(sun.size);
     p5.pop();
 
-    p5.sunRotation += 0.005;
+    sunRotation += 0.005;
 
     // Draw Planets
     Object.keys(planets).forEach((planetName) => {

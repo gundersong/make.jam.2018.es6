@@ -2,36 +2,37 @@ import { getRandomOrbitSpeed, getRandomMoon } from './utils';
 
 const minPlanetOrbitSpeed = 0.01;
 const maxPlanetOrbitSpeed = 0.02;
+const spaceBetweenPlanets = 12;
 
 export const planets = {
   mercury: {
-    distanceFromSun: 25,
+    distanceFromSun: spaceBetweenPlanets * 2.5,
     sizeComparedToSun: 0.1,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
   },
   venus: {
-    distanceFromSun: 35,
+    distanceFromSun: spaceBetweenPlanets * 3.5,
     sizeComparedToSun: 0.2,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
   },
   earth: {
-    distanceFromSun: 50,
+    distanceFromSun: spaceBetweenPlanets * 5.5,
     sizeComparedToSun: 0.3,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
     moons: [getRandomMoon()],
   },
   mars: {
-    distanceFromSun: 70,
+    distanceFromSun: spaceBetweenPlanets * 7,
     sizeComparedToSun: 0.25,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
     moons: [getRandomMoon(), getRandomMoon()],
   },
   jupiter: {
-    distanceFromSun: 90,
+    distanceFromSun: spaceBetweenPlanets * 9,
     sizeComparedToSun: 0.5,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
@@ -40,21 +41,21 @@ export const planets = {
     ],
   },
   saturn: {
-    distanceFromSun: 120,
+    distanceFromSun: spaceBetweenPlanets * 12,
     sizeComparedToSun: 0.2,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
     moons: [getRandomMoon(), getRandomMoon(), getRandomMoon()],
   },
   uranus: {
-    distanceFromSun: 135,
+    distanceFromSun: spaceBetweenPlanets * 13.5,
     sizeComparedToSun: 0.35,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
     moons: [getRandomMoon(), getRandomMoon(), getRandomMoon(), getRandomMoon(), getRandomMoon()],
   },
   neptune: {
-    distanceFromSun: 155,
+    distanceFromSun: spaceBetweenPlanets * 15.5,
     sizeComparedToSun: 0.35,
     angleToSun: (Math.random() * 100),
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),

@@ -30,11 +30,9 @@ export default function solarSystem(p5) {
   };
 
   p5.draw = () => {
-    p5.background(0);
     p5.camera(0, 250, -125, 0, 0, 0, 0, 1, 0);
-    p5.ambientLight(200);
-    p5.directionalLight(200, 200, 200, 0.1, 0.5, 0);
-    p5.directionalLight(200, 200, 200, 0.1, -0.5, 0);
+    p5.pointLight(255, 255, 255, 0, 0, 0);
+    p5.background(0);
 
     // drag to move the world.
     p5.orbitControl();

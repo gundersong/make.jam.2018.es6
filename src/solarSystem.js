@@ -1,4 +1,5 @@
 import { planets } from './planets';
+import { getRandomMoon } from './utils';
 
 const twoPi = 6.175;
 
@@ -13,6 +14,7 @@ const sun = {
 
 let sunTexture;
 let moonTexture;
+let bg;
 let sunRotation = 0;
 
 export default function solarSystem(p5) {
@@ -20,6 +22,7 @@ export default function solarSystem(p5) {
     p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
     sunTexture = p5.loadImage('./src/assets/sun.jpg');
     moonTexture = p5.loadImage('./src/assets/earthMoon.jpg');
+    bg = p5.loadImage('./src/assets/background.png');
 
     Object.keys(planets).forEach((planetName) => {
       planets[planetName].texture = p5.loadImage(`./src/assets/${planetName}.jpg`);

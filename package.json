@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "gundersong",
   "description": "Template for using p5 with ES6",
+  "main": "index.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/gundersong/p5-es6-template"
@@ -12,18 +13,18 @@
     "start": "webpack && http-server"
   },
   "dependencies": {
-    "p5": "^0.5.3"
+    "p5": "^0.8.0"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-core": "^6.13.2",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^6.2.5",
-    "babel-preset-env": "^1.5.1",
+    "@types/p5": "^0.7.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
     "file-loader": "^1.1.11",
-    "webpack": "^1.13.2"
+    "http-server": "^0.11.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

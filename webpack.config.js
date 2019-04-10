@@ -1,16 +1,21 @@
+const path = require('path');
+
 module.exports = {
-  entry: `${__dirname}/app.js`,
-  output: {
-    path: `${__dirname}/dist/`,
-    filename: 'bundle.js',
-  },
+  entry: './app.ts',
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        loader: 'babel-loader',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
 };

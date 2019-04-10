@@ -3,7 +3,7 @@
 ##Usage  
 npm i  
 npm run start
-
+npm run build
 
 ## Set as website on S3
 export region=ap-southeast-2
@@ -15,6 +15,7 @@ aws s3 website s3://$bucketName/ --index-document index.html --error-document er
 
 aws s3 cp . s3://$bucketName --recursive --acl public-read --exclude "*" --include "index.html" --include "app.js" --include "src/*" --include "dist/*"
 
+visit `http://$bucketName.s3-website-$region.amazonaws.com/`
 
 # Delete bucket
 aws s3 rm s3://$bucketName --recursive

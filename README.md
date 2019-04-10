@@ -1,9 +1,9 @@
 #P5 with ES6 template
 
 ##Usage  
-npm i  
-npm run start
-npm run build
+yarn  
+yarn start
+yarn build
 
 ## Set as website on S3
 export region=ap-southeast-2

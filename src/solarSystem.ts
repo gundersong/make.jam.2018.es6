@@ -37,11 +37,10 @@ const renderPlanet = (p5: P5, planetName: EPlanets) => {
   p5.rotateZ(angleToSun);
   p5.rotateX(90);
   p5.translate(sun.position.x + distanceFromSun, 0);
-  p5.sphere(sun.size * sizeComparedToSun);
-
   if (planetTexture) {
     p5.texture(planetTexture);
   }
+  p5.sphere(sun.size * sizeComparedToSun);
 
   if (moons) {
     moons.forEach((moon) => {
@@ -68,15 +67,17 @@ export default function solarSystem(p5: P5) {
     moonTexture = p5.loadImage('./src/assets/earthMoon.jpg');
 
     Object.keys(planets).forEach((p: string) => {
-      const planetName: EPlanets = EPlanets[p as keyof typeof EPlanets]
-      planets[planetName].texture = p5.loadImage(`./src/assets/${planetName}.jpg`);
+      const planetName: EPlanets = EPlanets[p as keyof typeof EPlanets];
+      const planetTexture = p5.loadImage(`./src/assets/${planetName}.jpg`);
+      planets[planetName].texture = planetTexture;
     });
   };
 
   p5.draw = () => {
     p5.camera(0, 250, -125, 0, 0, 0, 0, 1, 0);
-    p5.pointLight(255, 255, 255, 0, 0, 0);
+    p5.ambientLight(255, 255, 255);
     p5.background(0);
+    p5.noStroke();
 
     // drag to move the world.
     p5.orbitControl();
@@ -93,8 +94,8 @@ export default function solarSystem(p5: P5) {
 
     // Draw Planets
     Object.keys(planets).forEach((p) => {
-      const planetName: EPlanets = EPlanets[p as keyof typeof EPlanets]
-      renderPlanet(p5, planetName)
+      const planetName: EPlanets = EPlanets[p as keyof typeof EPlanets];
+      renderPlanet(p5, planetName);
     });
   };
 }

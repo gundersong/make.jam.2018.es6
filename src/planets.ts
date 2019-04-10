@@ -1,4 +1,4 @@
-import { getRandomOrbitSpeed, getRandomMoon } from './utils';
+import { getRandomMoon, getRandomOrbitSpeed } from './utils';
 
 import { EPlanets, IPlanet } from './types';
 
@@ -8,59 +8,59 @@ const spaceBetweenPlanets = 12;
 
 export const planets: { [Key in EPlanets]: IPlanet } = {
   [EPlanets.mercury]: {
-    distanceFromSun: spaceBetweenPlanets * 2.5,
-    sizeComparedToSun: 0.1,
     angleToSun: (Math.random() * 100),
+    distanceFromSun: spaceBetweenPlanets * 2.5,
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.1,
   },
   [EPlanets.venus]: {
-    distanceFromSun: spaceBetweenPlanets * 3.5,
-    sizeComparedToSun: 0.2,
     angleToSun: (Math.random() * 100),
+    distanceFromSun: spaceBetweenPlanets * 3.5,
     orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.2,
   },
   [EPlanets.earth]: {
-    distanceFromSun: spaceBetweenPlanets * 5.5,
-    sizeComparedToSun: 0.3,
     angleToSun: (Math.random() * 100),
-    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    distanceFromSun: spaceBetweenPlanets * 5.5,
     moons: [getRandomMoon()],
+    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.3,
   },
   [EPlanets.mars]: {
-    distanceFromSun: spaceBetweenPlanets * 7,
-    sizeComparedToSun: 0.25,
     angleToSun: (Math.random() * 100),
-    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    distanceFromSun: spaceBetweenPlanets * 7,
     moons: [getRandomMoon(), getRandomMoon()],
+    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.25,
   },
   [EPlanets.jupiter]: {
-    distanceFromSun: spaceBetweenPlanets * 9,
-    sizeComparedToSun: 0.5,
     angleToSun: (Math.random() * 100),
-    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    distanceFromSun: spaceBetweenPlanets * 9,
     moons: [
       getRandomMoon(), getRandomMoon(), getRandomMoon(), getRandomMoon(),
     ],
+    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.5,
   },
   [EPlanets.saturn]: {
-    distanceFromSun: spaceBetweenPlanets * 12,
-    sizeComparedToSun: 0.2,
     angleToSun: (Math.random() * 100),
-    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    distanceFromSun: spaceBetweenPlanets * 12,
     moons: [getRandomMoon(), getRandomMoon(), getRandomMoon()],
+    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.2,
   },
   [EPlanets.uranus]: {
-    distanceFromSun: spaceBetweenPlanets * 13.5,
-    sizeComparedToSun: 0.35,
     angleToSun: (Math.random() * 100),
-    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    distanceFromSun: spaceBetweenPlanets * 13.5,
     moons: [getRandomMoon(), getRandomMoon(), getRandomMoon(), getRandomMoon(), getRandomMoon()],
+    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.35,
   },
   [EPlanets.neptune]: {
-    distanceFromSun: spaceBetweenPlanets * 15.5,
-    sizeComparedToSun: 0.35,
     angleToSun: (Math.random() * 100),
-    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    distanceFromSun: spaceBetweenPlanets * 15.5,
     moons: [getRandomMoon()],
+    orbitSpeed: getRandomOrbitSpeed(minPlanetOrbitSpeed, maxPlanetOrbitSpeed),
+    sizeComparedToSun: 0.35,
   },
 };

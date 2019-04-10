@@ -13,7 +13,8 @@
     "start": "webpack && http-server"
   },
   "dependencies": {
-    "p5": "^0.8.0"
+    "p5": "^0.8.0",
+    "tslint": "^5.15.0"
   },
   "devDependencies": {
     "@types/p5": "^0.7.2",
@@ -26,5 +27,6 @@
     "typescript": "^3.4.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
-  }
+  },
+  "license": "BSD-3-Clause"
 }

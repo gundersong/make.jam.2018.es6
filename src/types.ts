@@ -1,4 +1,4 @@
-import { Image } from "p5";
+import { Image } from 'p5';
 
 export enum EPlanets {
     mercury = 'mercury',

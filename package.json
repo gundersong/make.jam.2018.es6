@@ -13,7 +13,7 @@
     "start": "webpack && http-server"
   },
   "dependencies": {
-    "p5": "^0.8.0",
+    "p5": "^1.1.9",
     "qs": "^6.9.4",
     "tslint": "^6.1.3"
   },
